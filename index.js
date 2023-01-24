@@ -19,6 +19,7 @@ export const connect = async () => {
     throw error;
   }
 };
+connect();
 mongoose.connection.on("disconnected", () => {
   console.log("mongoDB disconnected");
 });
@@ -31,6 +32,5 @@ app.use("/auth", authRoute);
 app.use("/review", reviewRoute);
 
 app.listen(PORT, () => {
-  connect();
   console.log(`The server started in: ${PORT} ✨✨`);
 });
