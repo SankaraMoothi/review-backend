@@ -13,8 +13,8 @@ app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
 });
 
-app.use("/api/auth", authRoute);
-app.use("/api/review", reviewRoute);
+app.use("/auth", authRoute);
+app.use("/review", reviewRoute);
 
 app.listen(PORT, () => {
   connect();
